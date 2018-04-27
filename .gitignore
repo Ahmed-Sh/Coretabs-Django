@@ -1,0 +1,5 @@
+db.sqlite3
+coretabs/*.pyc
+__pycache__/
+.idea/
+.idea/*.*
