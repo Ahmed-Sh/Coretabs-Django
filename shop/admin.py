@@ -9,7 +9,7 @@ make_price_zero.short_description = "Make selected products free"
 def make_discount(modeladmin, request, queryset):
     for product in queryset:
         new_price = float(product.price)*0.8
-    queryset.update(price=new_price)
+        queryset.update(price=new_price)
 
 make_discount.short_description = "Make 20%% Discount"
 
