@@ -1,5 +1,6 @@
 from django.db import models
 from django.template.defaultfilters import slugify
+from django.urls import reverse_lazy
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -14,7 +15,6 @@ class Category(models.Model):
         if not self.id:
             self.slug = slugify(self.name)
         super().save(*args, **kwargs)
-
 
     class Meta:
         ordering = ('name', )
@@ -36,6 +36,9 @@ class Product(models.Model):
         if not self.id:
             self.slug = slugify(self.name)
         super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse_lazy('product_detail', args=[self.slug])
 
 
     class Meta:
