@@ -1,14 +1,32 @@
-#header{
-  color: green;
-  font-size: 20px;
-}
-
-.logo{
+#header {
   color: blue;
   font-size: 15px;
 }
 
-h2{
-  color: violet;
-  font-size: 30px;
+.logo {
+  color: blue;
+  font-size: 25px;
+}
+
+h2 {
+  color: blue;
+  font-size: 25px;
+}
+
+h3 {
+  color: red;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: black;
+  font-size: 15px;
+}
+
+li {
+  color: darkblue;
+  font-size: 17px;
 }
