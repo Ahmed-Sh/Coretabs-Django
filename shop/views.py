@@ -4,17 +4,15 @@ from .models import Category, Product
 
 def product_list(request):
 	products = Product.objects.all()
-	return render(request, 'shop/product/list.html', {'products': products})
+	categories = Category.objects.all()
+	return render(request, 'shop/product/list.html', {'products': products, 'categories': categories})
 
-'''def product_details(request, slug):
+def product_detail(request, slug):
 	product = get_object_or_404(Product, slug=slug)
 	return render(request, 'shop/product/detail.html', {'product': product})
 
 def product_list_by_category(request,slug):
-	pass'''
-
-
-
-
-
+	category = get_object_or_404(Category ,slug=slug)
+	products = Product.objects.filter(category=category)
+	return render(request,'shop/product/cat.html',{'products':products})
 

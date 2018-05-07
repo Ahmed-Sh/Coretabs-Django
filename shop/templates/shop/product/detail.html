@@ -1,0 +1,14 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+    Product Category: {{product.category}}
+{% endblock %}
+
+{% block content %}
+   <ul>
+       <li>name: {{product.name}}</li>
+       <li>price: {{product.price}}</li>
+       <li>stock: {{product.stock}}</li>
+       <li>description: {{product.description}}</li>
+   </ul>
+{% endblock %}

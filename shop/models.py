@@ -16,6 +16,9 @@ class Category(models.Model):
             self.slug = slugify(self.name)
         super().save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse_lazy('product_list_by_category', args=[self.slug])
+
     class Meta:
         ordering = ('name', )
 

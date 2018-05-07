@@ -1,4 +1,14 @@
 #header{
-  color: red;
-  font-size: 25px;
+  color: green;
+  font-size: 20px;
+}
+
+.logo{
+  color: blue;
+  font-size: 15px;
+}
+
+h2{
+  color: violet;
+  font-size: 30px;
 }
